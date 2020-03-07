@@ -3,6 +3,10 @@
 var React = require('react-native');
 
 import COLORS from './colors.js';
+import { Dimensions } from 'react-native';
+
+var screenHeight = Dimensions.get('screen').height;
+var screenWidth = Dimensions.get('screen').width;
 
 var {
   StyleSheet,
@@ -12,23 +16,37 @@ module.exports = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#242424',
-    alignItems: 'center',
-    justifyContent: 'center',
-    color: '#f4f4f4'
+    color: '#f4f4f4',
+    paddingLeft: '3%',
+    paddingTop: '15%',
+  },
+  featuredContainer: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'flex-start',
+    height: screenHeight * 0.4,
+    width: screenWidth,
+  },
+  cardContainer: {
+    flex: 1,
+    width: screenWidth,
+    left: 0,
+    marginBottom: '10%',
   },
   headerText: {
-    fontFamily: 'rubikb',
     fontSize: 27,
     color: COLORS.PINK,
+    fontWeight: 'bold',
+    marginBottom: '5%',
   },
   subheaderText: {
-    fontFamily: 'rubikb',
     fontSize: 20,
-    backgroundColor: COLORS.WHITE,
+    color: COLORS.WHITE,
+    fontWeight: 'bold',
   },
   bodyText: {
-    fontFamily: 'rubikr',
     fontSize: 16,
-    backgroundColor: COLORS.GREY,
+    color: COLORS.GREY,
   },
 });
