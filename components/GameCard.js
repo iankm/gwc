@@ -5,31 +5,23 @@ import COLORS from '../styles/colors.js';
 var screenHeight = Dimensions.get('screen').height;
 var screenWidth = Dimensions.get('screen').width;
 
-export default class Card extends React.Component {
-
+export default class GameCard extends React.Component {
     render() {
       return (
-        <View style={cardStyles.card}>
-            <View style={cardStyles.imageContainer}>
-              <View style={cardStyles.indicator} />
-              <Image style={cardStyles.image} source={{uri: this.props.uri}} />
+        <View style={gameCardStyles.card}>
+            <View style={gameCardStyles.imageContainer}>
+              <Image style={gameCardStyles.image} source={{uri: this.props.uri}} />
             </View>
-            <Text style={cardStyles.infoHeaderText} numberOfLines={1}>
-              {this.props.name}
-            </Text>
-            <Text style={cardStyles.infoSubheaderText} numberOfLines={1}>
-              {this.props.title}
-            </Text>
         </View>
       );
     }
 }
 
-const cardStyles = StyleSheet.create({
+const gameCardStyles = StyleSheet.create({
   card: {
     display: 'flex',
-    width: screenWidth * 0.5,
-    height: screenHeight * 0.3,
+    width: screenWidth * 0.4,
+    height: screenHeight * 0.25,
     backgroundColor: COLORS.WHITE,
     borderRadius: 10,
     overflow: 'hidden',

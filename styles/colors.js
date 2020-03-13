@@ -5,6 +5,7 @@ const COLORS = {
   GREY: '#666666',
   PINK: '#f23277',
   ONLINEGREEN: '#3fe3ac',
+  BLUE: '#3fd5e3',
 }
 
 export default COLORS;
